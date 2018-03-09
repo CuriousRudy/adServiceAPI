@@ -4,6 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :product_name
       t.string :product_sku
       t.integer :advertiser_id
+      t.string :advertiser_name
 
 
       t.timestamps

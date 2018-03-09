@@ -15,11 +15,14 @@ def assign_advertiser(name)
     return 5
   when "Logitech"
     return 6
+  when "Staples"
+    return 7
   end
+
 
 end
 
-advertisers = ['Coca Cola', 'Lenovo', 'Best Buy', 'Apple', 'Acer', 'Logitech']
+advertisers = ['Coca Cola', 'Lenovo', 'Best Buy', 'Apple', 'Acer', 'Logitech', "Staples"]
 advertisers.each do |company|
   # binding.pry
   Advertiser.create(name: company)
@@ -32,5 +35,5 @@ products = CSV.parse(products)
 
 products.each do |product|
   # binding.pry
-  Product.create(product_name: product[0], product_sku: product[1], advertiser_id: assign_advertiser(product[2]))
+  Product.create(product_name: product[0], product_sku: product[1], advertiser_id: assign_advertiser(product[2]), advertiser_name: product[2])
 end
