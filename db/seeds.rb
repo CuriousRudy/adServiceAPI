@@ -17,12 +17,18 @@ def assign_advertiser(name)
     return 6
   when "Staples"
     return 7
+  when "Motorola"
+    return 8
+  when "Holmes"
+    return 9
+  when "Nike"
+    return 10
   end
 
 
 end
 
-advertisers = ['Coca Cola', 'Lenovo', 'Best Buy', 'Apple', 'Acer', 'Logitech', "Staples"]
+advertisers = ['Coca Cola', 'Lenovo', 'Best Buy', 'Apple', 'Acer', 'Logitech', "Staples", 'Motorola', 'Holmes', 'Nike']
 advertisers.each do |company|
   # binding.pry
   Advertiser.create(name: company)

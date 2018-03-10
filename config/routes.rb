@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :advertisers
       resources :products
+      post '/more', to: 'products#more'
     end
   end
 end

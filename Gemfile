@@ -21,7 +21,9 @@ gem 'puma', '~> 3.7'
 gem 'rack-cors'
 gem 'pry'
 gem 'oj'
+gem 'active_model_serializers'
 gem 'fast_jsonapi'
+gem 'jwt'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
