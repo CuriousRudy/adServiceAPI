@@ -23,6 +23,7 @@ gem 'pry'
 gem 'oj'
 gem 'active_model_serializers'
 gem 'fast_jsonapi'
+gem 'postgres-copy'
 gem 'jwt'
 
 # Use Capistrano for deployment
