@@ -40,19 +40,19 @@ end
 
 #/////// UNCOMMENT FIRST AND RUN WITH FILE TO ADD UNIQUE ID
 # add the id column to the csv, using our custom method. YOU MIGHT HAVE TO REMOVE THE QUOTES FROM THE HEADERS IN NEW_DATA.CSV
-write_parameters = { write_headers: true, headers: %w(product_name,product_sku,advertiser_name,advertiser_id) }
-read_parameters  = { encoding: 'UTF-8',
-                     headers: true,
-                     header_converters: :symbol,
-                     converters: :all }
-
-CSV.open('./db/seeds/new_data.csv', 'w+', write_parameters) do |new_csv|
-  CSV.foreach('./db/seeds/products.csv', read_parameters) do |row|
-    advertiser_id = assign_advertiser(row[:advertiser_name])
-    row[:advertiser_id] = advertiser_id.to_i
-    new_csv << row
-  end
-end
+# write_parameters = { write_headers: true, headers: %w(product_name,product_sku,advertiser_name,advertiser_id) }
+# read_parameters  = { encoding: 'UTF-8',
+#                      headers: true,
+#                      header_converters: :symbol,
+#                      converters: :all }
+#
+# CSV.open('./db/seeds/new_data.csv', 'w+', write_parameters) do |new_csv|
+#   CSV.foreach('./db/seeds/products.csv', read_parameters) do |row|
+#     advertiser_id = assign_advertiser(row[:advertiser_name])
+#     row[:advertiser_id] = advertiser_id.to_i
+#     new_csv << row
+#   end
+# end
 
 
 # COMMENT THIS OUT WHILE RUNNING THE SCRIPT FOR ADDING ID's

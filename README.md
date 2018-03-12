@@ -8,6 +8,8 @@ Lines 43-55 contain the script to read over the csv, and translate the advertise
 
 The seed of the data file should take around 30 seconds at MOST.
 
+I have included the new_data.csv, and dropped the previous version of the database. To test the import script, just run `rake db:seed`
+
 ## Usage
 
 Before seeding the file, I added an extra column to the CSV, with the header 'advertiser_id', and copied the advertiser name from the column of advertisers. In the seed script, a helper method translates the name of the advertiser to an id number, and associates the advertiser during the seed of all of the products. This is a little slower for having to edit the file, but ensures that only one pass is needed to instantiate the records and associate them to their advertisers.
