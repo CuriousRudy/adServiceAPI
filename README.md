@@ -8,7 +8,7 @@ Lines 43-55 contain the script to read over the csv, and translate the advertise
 
 The seed of the data file should take around 30 seconds at MOST.
 
-I have included the new_data.csv, and dropped the previous version of the database. To test the import script, just run `rake db:seed`
+I have included the new_data.csv, which would be the result of running the scripts on line 43. To test the import script, just run `rake db:seed`
 
 ## Usage
 
