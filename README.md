@@ -4,7 +4,9 @@ A rails backend api for the AdService homework project
 
 ## Instructions
 
-Make sure the path in the seeds.rb directory points to your CSV. Run `rake db:seed` and allow up to 3.5 minutes for the records to be inserted into the database. The initial seed takes about 3 minutes/1MM records, but also associates the Advertiser and the Product.
+Lines 43-55 contain the script to read over the csv, and translate the advertiser name and add the id to the csv. To import a database, make sure to comment out lines 60-90, then run `rake db:seed`. After the task finishes, open new_data.csv and delete the extra quotes around the header, comment out lines 43-55 and uncomment 60-90 and run `rake db:seed`
+
+The seed of the data file should take around 30 seconds at MOST.
 
 ## Usage
 
